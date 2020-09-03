@@ -3,6 +3,16 @@
 
 
 using namespace std;
+float sumar(int n1, int n2) {
+    int resultado = 0;
+    resultado = n1 + n2;
+    return resultado;
+}
+float restar(int n1, int n2) {
+    int resultado = 0;
+    resultado = n1 - n2;
+    return resultado;
+}
 float Division(int n1, int n2) {
     float resultado = 0;
     resultado = n1 /n2;
@@ -28,16 +38,26 @@ int main(){
     int seleccion=0;
     do {
         do {
-           cout << "ingrese uno de los valores 1.suma 2.Resta 3.Multiplicacion  4.elevacion 5.raiz 6.division 7.salir" << endl;
-           cin >> seleccion;
+            cout << "ingrese uno de los valores 1.suma 2.Resta 3.Multiplicacion  4.elevacion 5.raiz 6.division 7.salir" << endl;
+            cin >> seleccion;
         } while (seleccion > 7 && seleccion < 1);
         if (seleccion == 1)
         {
-
+            int n1, n2;
+            cout << "ingrese el primer valor" << endl;
+            cin >> n1;
+            cout << "ingrese el segundo valor" << endl;
+            cin >> n2;
+            cout <<"el valor de la suma entre "<<n1<<" y "<<n2<<" es "<< sumar(n1, n2);
         }
         else if (seleccion == 2)
         {
-            
+            int n1, n2;
+            cout << "ingrese el primer valor" << endl;
+            cin >> n1;
+            cout << "ingrese el segundo valor" << endl;
+            cin >> n2;
+            cout <<"el valor de la resta entre "<<n1<<" y "<<n2<<" es "<< restar(n1, n2);
         }
         else if (seleccion == 3)
         {
@@ -70,7 +90,7 @@ int main(){
         }
         else if (seleccion == 6)
         {
-            int n1, n2
+            int n1, n2;
             cout << "ingrese el primer valor" << endl;
             cin >> n1;
             cout << "ingrese el segundo valor" << endl;
